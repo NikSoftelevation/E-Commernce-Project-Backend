@@ -15,6 +15,10 @@ import javax.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Cart {
 	
 
@@ -28,29 +32,4 @@ public class Cart {
   private	Set<CartItem> items= new HashSet<>();
  	@OneToOne
  	private User user;
-	public int getCartId() {
-		return cartId;
 	}
-	public void setCartId(int cartId) {
-		this.cartId = cartId;
-	}
-	public Set<CartItem> getItems() {
-		return items;
-	}
-	public void setItems(Set<CartItem> items) {
-		this.items = items;
-	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-
-	
-	
-	
-	
-
-}
